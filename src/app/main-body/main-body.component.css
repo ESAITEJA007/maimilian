@@ -1,0 +1,7 @@
+.main-body {
+  background-color: greenyellow;
+  margin: 10px 10px 10px 10px;
+  height: 500px;
+  text-align: center;
+  border: 1px solid rgb(32, 210, 32);
+}
