@@ -1,10 +1,10 @@
-
 <div class="main-body">
-
-   
-    
-
-<p>Your app is working successfully</p>
-
-
+    <div class="display form-container">
+        <button (click)="toDisplay()">Display</button>
+        <div *ngIf="isDisplay">
+            <b>
+                <p *ngFor="let a of animals">{{a}}</p>
+            </b>
+        </div>
+    </div>
 </div>

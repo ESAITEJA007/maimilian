@@ -1,7 +1,7 @@
 <div class="main">
     <div class="Main-app">
         <b>
-            <p class="heading" >{{header}}</p>
+            <p class="heading">{{header}}</p>
             <span class="curr_date">{{ todays_date }}</span>
         </b>
     </div>
@@ -10,13 +10,14 @@
             <p class="duration"> {{ duration }} <span class="days">Days</span></p>
         </b>
     </div>
-   
-</div>
-<div class="form-container heading-form form-control" >
-<label>Update Heading:  </label>
 
-<input type="text" [(ngModel)]="heading">
-<button class="btn btn-primary" (click)="changeHeader()"  [disabled] = "isDisabled" value="">Submit</button>
+</div>
+<div class="focontainerm-r heading-form form-control">
+    <label>Update Heading: </label>
+
+    <input type="text" [(ngModel)]="heading">
+    <button class="btn btn-primary" (click)="changeHeader()" [disabled]="isDisabled" value="">Submit</button>
+    <button class="btn btn-primary" (click)="resetHeader()" [disabled]="isDisabled" value="">Reset</button>
 </div>
 
 <app-header></app-header>

@@ -8,17 +8,23 @@ import { Component } from '@angular/core';
 export class AppComponent {
   todays_date = new Date().toLocaleDateString();
   header = 'Maximilian Course - March 05 2023';
-  heading = "";
+  heading = '';
   isDisabled = true;
-  constructor(){
-    setTimeout(() => { this.isDisabled = false;},5000);
+  constructor() {
+    setTimeout(() => {
+      this.isDisabled = false;
+    }, 5000);
   }
   diffInMs = new Date().getTime() - new Date('2023-03-05').getTime();
   duration = Math.floor(this.diffInMs / (1000 * 60 * 60 * 24));
 
-  changeHeader(){
+  changeHeader() {
     // console.log(event);
-    this.header = this.heading;
-
+    if (this.heading.length > 0) {
+      this.header = this.heading;
+    }
+  }
+  resetHeader() {
+    this.header = 'Maximilian Course - March 05 2023';
   }
 }
